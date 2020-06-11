@@ -1,0 +1,56 @@
+[
+    {
+        "name":"Super Mario Odissey - Switch",
+        "price":"197,88",
+        "path":"/images/sm.jpg",
+        "codigoProduto":"001"
+    },
+    {
+        "name":"Call of Duty: Infinite Warfare",
+        "price":"49,99",
+        "path":"/images/cod.webp",
+        "codigoProduto":"002"
+    },
+    {
+        "name":"The Witcher III - Wild Hunt",
+        "price":"100,00",
+        "path":"/images/tw3.jpg",
+        "codigoProduto":"003"
+    },
+    {
+        "name":"Call of Duty: WWII",
+        "price":"249,99",
+        "path":"/images/codWW2.webp",
+        "codigoProduto":"004"
+    },
+    {
+        "name":"Mortal Kombat XL",
+        "price":"69,99",
+        "path":"/images/mk.jpg",
+        "codigoProduto":"005"
+    },
+    {
+        "name":"Shards of Darkness",
+        "price":"71,94",
+        "path":"/images/sod.jpg",
+        "codigoProduto":"006"
+    },
+    {
+        "name":"Terra Média: Sombras de Mordor",
+        "price":"79,99",
+        "path":"/images/som.jpg",
+        "codigoProduto":"007"
+    },
+    {
+        "name":"FIFA 18",
+        "price":"195,39",
+        "path":"/images/f18.jpg",
+        "codigoProduto":"008"
+    },
+    {
+        "name":"Horizon Zero Dawn",
+        "price":"115,80",
+        "path":"/images/hzr.jpg",
+        "codigoProduto":"009"
+    }
+]
