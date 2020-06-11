@@ -2,16 +2,26 @@
   <div id="app" class="row justify-content-center m-0">
     <div class="col-11">
       <div class="row pt-5">
-        <div class="col-9">
-          <div class="row d-flex justify-content-between pb-4">
-            <h1 id="topic">Games</h1>
-            <div class="col-7 col-sm-3 d-flex align-items-center">
+        <div class="col-12 col-lg-9">
+          <div class="row d-flex justify-content-center justify-content-sm-between pb-4">
+            <div class="col-12 col-sm-5">
+            <h1 id="topic" class="text-center text-sm-left">Games</h1>
+            </div>
+            <div class="col-9 col-sm-5 col-lg-3 d-flex align-items-center justify-content-center">
               <Select 
                 :options="options" 
                 :sortByBiggestPrice="sortByBiggestPrice"
                 :sortBySmallPrice="sortBySmallPrice"  
               />
+              <div id="button-mobile-card" class="d-block d-lg-none d-flex fa-2x pl-4">
+                  <i class="fas fa-cart-arrow-down" @click="handleToggleCart"></i>
+                  <span>{{selectedsItems.length}}</span>
+              </div>
+              <div v-if='cartMobileIsOpen' id="cart-mobile" class="position-absolute d-block d-lg-none">
+                  <CardCart :items="selectedsItems" :key="update" />
+              </div>
             </div>
+
           </div>
           <div class="row justify-content-between">
               <div class="col-6 col-sm-6 col-md-4 pl-0 pb-5"  v-for="(game,i) in games" :key="i">
@@ -19,7 +29,7 @@
               </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <CardCart :items="selectedsItems" :key="update" />
         </div>
       </div>
@@ -75,6 +85,10 @@
             return Number(a.price) == Number(b.price) ? 0 : +(Number(a.price) > Number(b.price)) || -1;
           })
       },
+      handleToggleCart(){
+        console.log('kkkkkk')
+        this.cartMobileIsOpen = !this.cartMobileIsOpen
+      },
       sortByRelevance(){
         this.games = games
       }
@@ -90,6 +104,7 @@
           games:games,
           selectedsItems:[],
           update:0,
+          cartMobileIsOpen:false
       }
     },
     created(){
@@ -116,5 +131,16 @@
     font-size: 3rem;
     font-weight: bold;
     font-family: Roboto, sans-serif;
+  }
+  #cart-mobile{
+    top: 60px;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+  }
+  #button-mobile-card{
+
+  }
+  #button-mobile-card span{
+    font-size: 1.1rem;
   }
 </style>
