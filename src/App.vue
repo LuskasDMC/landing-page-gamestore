@@ -76,7 +76,7 @@
           })
       },
       sortByRelevance(){
-        this.games = this.defaultGames
+        this.games = games
       }
     },
     data(){
